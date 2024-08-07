@@ -24,7 +24,7 @@ module.exports = {
     conditionNames: ['svelte', 'browser']
   },
   output: {
-    path: path.join(__dirname, '/public'),
+    path: path.join(__dirname, '/out'),
     filename: '[name].js',
     chunkFilename: '[name].[id].js'
   },
