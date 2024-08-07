@@ -99,7 +99,7 @@ function createNewConnection (wsAddr: string, sessionId: string) {
         connection.ws = null
       }
       // https://do-e.clients.kiwiirc.com/webirc/kiwiirc/074/3vlzxfg0/websocket
-      connection.ws = new WebSocket(wsAddr + ('' + (Math.random() * 999 | 0)).padStart(3, '0') + '/' + crypto.randomUUID().slice(0, 8) + '/websocket')
+      connection.ws = new WebSocket(wsAddr.replace('https', 'wss') + ('' + (Math.random() * 999 | 0)).padStart(3, '0') + '/' + crypto.randomUUID().slice(0, 8) + '/websocket')
       // connection.ws = new SockJS(wsAddr)
       const onopen = () => {
         const connectStr = sessionId
