@@ -35,9 +35,13 @@ export default class MessageClient extends EventEmitter {
 
     this.irc.on('join', (user: User) => {
       this.users.value[user.ident] = user
+      this.users.update(users => users)
     })
 
-    const deleteUser = (user: User) => delete this.users.value[user.ident]
+    const deleteUser = (user: User) => {
+      delete this.users.value[user.ident]
+      this.users.update(users => users)
+    }
     this.irc.on('quit', deleteUser)
     this.irc.on('part', deleteUser)
     this.irc.on('kick', deleteUser)
