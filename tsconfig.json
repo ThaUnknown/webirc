@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "verbatimModuleSyntax": true,
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": false,
+		"noEmit": true,
+    "allowImportingTsExtensions": true,
+    "baseUrl": "types",
+    "typeRoots": ["types"]
+  }
+}
