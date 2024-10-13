@@ -10,14 +10,9 @@ module.exports = {
     'build/bundle': ['./src/main.js']
   },
   resolve: {
-    fallback: {
-      // Fallback modules for node internals when building with webpack5
-      stream: require.resolve('stream-browserify'),
-      buffer: require.resolve('buffer/'),
-      util: require.resolve('util/')
-    },
     alias: {
-      svelte: path.resolve('node_modules', 'svelte/src/runtime')
+      svelte: path.resolve('node_modules', 'svelte/src/runtime'),
+      'uint8-util': path.resolve('node_modules', 'uint8-util/browser.js')
     },
     extensions: ['.mjs', '.js', '.svelte', '.ts'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
@@ -66,9 +61,6 @@ module.exports = {
   },
   mode,
   plugins: [
-    new webpack.ProvidePlugin({
-      process: 'process-fast'
-    }),
     new webpack.DefinePlugin({
       global: 'globalThis'
     }),
@@ -76,7 +68,7 @@ module.exports = {
       filename: '[name].css'
     })
   ],
-  devtool: prod ? false : 'source-map',
+  devtool: 'source-map',
   devServer: {
     hot: true,
     static: {

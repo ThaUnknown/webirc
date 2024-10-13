@@ -1,0 +1,1 @@
+{"version":3,"file":"build/bundle.css","mappings":"AAAA;EACE,iBAAiB;EACjB,SAAS;EACT,aAAa;EACb,sBAAsB;AACxB,C","sources":["webpack://webirc/./src/app.css"],"sourcesContent":["html, body{\r\n  min-height: 100vh;\r\n  margin: 0;\r\n  display: flex;\r\n  flex-direction: column;\r\n}"],"names":[],"sourceRoot":""}

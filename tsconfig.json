@@ -12,7 +12,7 @@
     "target": "ESNext",
     "verbatimModuleSyntax": true,
     "module": "ESNext",
-    "allowSyntheticDefaultImports": false,
+    "allowSyntheticDefaultImports": true,
 		"noEmit": true,
     "allowImportingTsExtensions": true,
     "baseUrl": "types",

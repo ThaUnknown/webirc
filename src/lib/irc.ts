@@ -1,5 +1,5 @@
-import Client from 'irc-framework/src/client.js'
-import { EventEmitter } from 'eventemitter3'
+import Client from './irc/client.ts'
+import { EventEmitter } from 'events'
 import { createChannelConstructor } from './serverConnection.ts'
 import { writable } from 'simple-store-svelte'
 

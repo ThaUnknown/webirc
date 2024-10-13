@@ -1,4 +1,4 @@
-import { EventEmitter } from 'eventemitter3'
+import { EventEmitter } from 'events'
 
 declare module 'irc-framework/src/client.js' {
   export default class Client extends EventEmitter<string | symbol, any> {
